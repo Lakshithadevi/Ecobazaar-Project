@@ -1,0 +1,11 @@
+product_id,name,category,tags,description,price,carbon_footprint,image_path
+1,Bamboo Toothbrush,Hygiene,bamboo eco toothbrush,biodegradable bamboo toothbrush for daily use,120,0.3,https://images.unsplash.com/photo-1600181951204-1e9a0a3b35f1
+2,Reusable Water Bottle,Utility,reusable bottle steel,high-quality stainless steel water bottle,350,0.8,https://images.unsplash.com/photo-1609947017136-7a7f62d3077b
+3,Organic Cotton Bag,Utility,cotton bag eco,sustainable organic cotton shopping bag,200,0.5,https://images.unsplash.com/photo-1611078489935-c37cfcf63f15
+4,Stainless Steel Straw Set,Kits,steel straw eco,reusable stainless steel straw set with brush,180,0.2,https://images.unsplash.com/photo-1571192776145-9f563c1df686
+5,Organic Handmade Soap,Hygiene,organic soap herbal,natural handmade eco-friendly soap,150,0.4,https://images.unsplash.com/photo-1600520503724-be7e8c03f58a
+6,Reusable Coffee Cup,Kitchen,reusable cup eco,bpa-free eco-friendly reusable coffee cup,250,0.7,https://images.unsplash.com/photo-1523906630133-f6934a1ab1f6
+7,Eco-Friendly Areca Plates,Kitchen,areca plates biodegradable,natural areca leaf plates for dining,220,0.6,https://images.unsplash.com/photo-1556912172-45b7abe8f69b
+8,Herbal Shampoo Bar,Bath,shampoo bar herbal,chemical-free natural shampoo bar,180,0.3,https://images.unsplash.com/photo-1598547604445-e5f9c8e2db8c
+9,Bio Enzyme Surface Cleaner,Cleaning,bio cleaner natural,eco-friendly bio enzyme floor and surface cleaner,210,0.4,https://images.unsplash.com/photo-1581579185169-1ab26d5a5cd4
+10,Recycled Paper Notebook,Stationery,recycled notebook eco,recycled paper notebook for writing,120,0.2,https://images.unsplash.com/photo-1515378791036-0648a3ef77b2
