@@ -1,0 +1,114 @@
+.eco-rank-container {
+  background: #f0fdf4;
+  min-height: 100vh;
+  margin-top: 35px;
+}
+
+.rank-content {
+  padding: 40px;
+  text-align: center;
+}
+
+.rank-subtext {
+  color: #047857;
+  margin-bottom: 25px;
+}
+
+.current-rank-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 128, 96, 0.1);
+  padding: 30px;
+  margin: 0 auto 40px;
+  max-width: 600px;
+}
+
+.current-rank-card h3 {
+  color: #065f46;
+  font-size: 1.8rem;
+}
+
+.points {
+  font-weight: bold;
+  color: #059669;
+  margin-bottom: 15px;
+}
+
+.progress-container {
+  width: 100%;
+  background: #e5e7eb;
+  border-radius: 8px;
+  height: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 12px;
+  border-radius: 8px;
+  transition: width 0.5s ease;
+}
+
+.progress-text {
+  color: #065f46;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* 🎁 Offer Card */
+.offer-card {
+  background: #ecfdf5;
+  border-left: 5px solid #059669;
+  padding: 20px;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.offer-card h4 {
+  color: #065f46;
+  margin-bottom: 8px;
+}
+
+.offer-card p {
+  color: #047857;
+  font-size: 1rem;
+}
+
+/* Rank Table */
+.rank-table {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 128, 96, 0.08);
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.rank-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.rank-table th,
+.rank-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #d1fae5;
+}
+
+.rank-table th {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.active-rank {
+  background: #ecfdf5;
+  font-weight: bold;
+}
+
+.offer-text {
+  color: #047857;
+  font-size: 0.95rem;
+}

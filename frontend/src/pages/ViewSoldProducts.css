@@ -1,0 +1,232 @@
+.view-sold-container {
+  background: #f1fdf2;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.sold-content {
+  padding: 40px 60px;
+}
+
+/* Title */
+.sold-content h2 {
+  color: #0f5132;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Stats Bar */
+.stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 18px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-card h3 {
+  color: #198754;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.stat-card p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0f5132;
+}
+
+/* Export Button */
+.export-btn {
+  background: linear-gradient(45deg, #0f5132, #198754);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.export-btn:hover {
+  background: linear-gradient(45deg, #157347, #0c4128);
+  transform: translateY(-2px);
+}
+
+/* Table */
+.sold-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.sold-table th {
+  background: #0f5132;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.sold-table td {
+  padding: 12px;
+  text-align: center;
+  color: #222;
+  border-bottom: 1px solid #ddd;
+}
+
+.sold-table tr:hover {
+  background: #e8f9ee;
+}
+
+.sold-table img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .stats-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .sold-table table {
+    font-size: 13px;
+  }
+
+  .sold-table img {
+    width: 50px;
+    height: 50px;
+  }
+}
+.view-sold-container {
+  background: #f1fdf2;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.sold-content {
+  padding: 40px 60px;
+}
+
+/* Title */
+.sold-content h2 {
+  color: #0f5132;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Stats Bar */
+.stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 18px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-card h3 {
+  color: #198754;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.stat-card p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0f5132;
+}
+
+/* Export Button */
+.export-btn {
+  background: linear-gradient(45deg, #0f5132, #198754);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.export-btn:hover {
+  background: linear-gradient(45deg, #157347, #0c4128);
+  transform: translateY(-2px);
+}
+
+/* Table */
+.sold-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.sold-table th {
+  background: #0f5132;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.sold-table td {
+  padding: 12px;
+  text-align: center;
+  color: #222;
+  border-bottom: 1px solid #ddd;
+}
+
+.sold-table tr:hover {
+  background: #e8f9ee;
+}
+
+.sold-table img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .stats-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .sold-table table {
+    font-size: 13px;
+  }
+
+  .sold-table img {
+    width: 50px;
+    height: 50px;
+  }
+}

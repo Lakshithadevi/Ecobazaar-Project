@@ -1,0 +1,112 @@
+/* 🌿 Product Card */
+.eco-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eco-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* 🖼 Image */
+.eco-image-wrapper {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+}
+
+.eco-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.eco-card:hover .eco-image {
+  transform: scale(1.03);
+}
+
+/* 🧾 Content Section */
+.eco-content {
+  text-align: center;
+  padding: 15px;
+}
+
+.eco-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #064e3b;
+  margin: 10px 0;
+}
+
+/* ⭐ Rating + ♻️ Eco Points */
+.eco-badges {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.eco-rating,
+.eco-ep {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #eafbe7;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.eco-rating {
+  background: #c6f6d5;
+  color: #0f5132;
+}
+
+.eco-ep {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* 💰 Price */
+.eco-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  margin: 8px 0;
+}
+
+/* 🛒 Add to Cart Button */
+.eco-btn {
+  background-color: #064e3b;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 0;
+  width: 90%;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.eco-btn:hover {
+  background-color: #046241;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .eco-card {
+    width: 90%;
+  }
+}

@@ -1,0 +1,486 @@
+/* Base layout */
+.buybox-container {
+  background: #f6fff6;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: #064d21;
+  margin-top: 70px;
+}
+
+.buybox-content {
+  padding: 40px 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.buybox-card {
+  display: flex;
+  gap: 28px;
+  width: min(1200px, 96%);
+  background: linear-gradient(180deg, #ffffff, #f3fff4);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 28px rgba(5, 80, 40, 0.08);
+}
+
+/* Left */
+.buybox-left {
+  width: 42%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.floating-card {
+  background: linear-gradient(135deg, #eaffea, #ffffff);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(10, 130, 75, 0.08);
+}
+
+.buybox-image {
+  width: 100%;
+  max-width: 320px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.product-summary h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #024d20;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f5132;
+  margin: 6px 0;
+}
+
+.eco-note {
+  margin-top: 8px;
+  background: #e9fff0;
+  padding: 10px;
+  border-radius: 10px;
+  color: #095a2f;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+/* Right */
+.buybox-right {
+  width: 58%;
+  padding-left: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sub-text {
+  color: #235b3a;
+  margin: 0 0 6px 0;
+}
+
+/* form groups */
+.form-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.form-group input[type="number"],
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #dbeee0;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group textarea { resize: vertical; }
+
+.hint {
+  color: #1f7a4c;
+  font-size: 13px;
+}
+
+/* Payment cards */
+.payment-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.payment-card {
+  background: #fbfff9;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e6f6ea;
+  width: 48%;
+  min-width: 170px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  box-shadow: 0 6px 14px rgba(10,120,70,0.03);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.payment-card .icon {
+  font-size: 22px;
+}
+
+.payment-card h5 {
+  margin: 0;
+  font-size: 15px;
+  color: #064d21;
+}
+
+.payment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,140,75,0.08);
+}
+
+.payment-card.active {
+  background: linear-gradient(90deg, #e9ffea, #f0fff4);
+  border: 1px solid #c9f5cf;
+  box-shadow: 0 14px 32px rgba(0,160,80,0.08);
+}
+
+/* order summary */
+.order-summary {
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #eef9ee;
+}
+
+.order-summary hr { border: 0; border-top: 1px dashed rgba(0,0,0,0.06); margin: 10px 0; }
+
+.total-payable {
+  font-size: 18px;
+  color: #083e23;
+  margin-top: 6px;
+}
+
+/* buttons */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.confirm-btn {
+  padding: 12px 18px;
+  background: linear-gradient(45deg, #198754, #0f5132);
+  color: white;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(15, 81, 50, 0.12);
+}
+
+.cancel-btn {
+  padding: 10px 16px;
+  background: #fff;
+  color: #0f5132;
+  border: 1px solid #d8efe0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Payment modal */
+.payment-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.payment-modal {
+  width: min(980px, 96%);
+  background: linear-gradient(180deg, #ffffff, #f6fff7);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(5,80,40,0.18);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* layout inside modal */
+.payment-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+/* upi frame */
+.upi-frame {
+  flex: 1;
+  min-width: 220px;
+  background: #fcfff9;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #eaf9ee;
+}
+
+.upi-qr { width: 140px; height:140px; border-radius: 8px; display:block; margin: 6px auto; }
+
+.upi-btn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: linear-gradient(45deg,#0f5132,#198754);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* card panel */
+.card-panel {
+  flex: 1;
+  min-width: 240px;
+  background: #fcfff9;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #eaf9ee;
+}
+
+.card-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.card-actions {
+  display:flex;
+  gap:8px;
+  margin-top: 12px;
+}
+
+.open-card-btn {
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 10px;
+  border:1px solid #d9f1dd;
+  cursor: pointer;
+}
+
+/* netbank panel */
+.netbank-panel {
+  flex: 1;
+  min-width: 200px;
+  background: #fcfff9;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #eaf9ee;
+}
+
+/* Success overlay and confetti */
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.success-box {
+  background: linear-gradient(135deg,#198754,#0f5132);
+  color: white;
+  padding: 32px 44px;
+  border-radius: 20px;
+  text-align: center;
+  width: min(520px,95%);
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,255,130,0.08);
+  overflow: hidden;
+}
+
+.success-ring {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,0.18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+.success-tick {
+  font-size: 44px;
+  color: #bfffbe;
+  font-weight: 800;
+}
+
+.success-text { margin-top: 8px; color: #eaffea; }
+
+.receipt {
+  margin-top: 12px;
+  text-align: left;
+  background: rgba(255,255,255,0.05);
+  padding: 12px;
+  border-radius: 10px;
+  color: #e7ffe7;
+}
+
+.total-small { margin-top: 8px; font-weight: 700; }
+
+.redirect-msg { margin-top: 10px; color: #dfffe2; }
+
+/* confetti leaves: random positions by animation delays */
+.confetti-container { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.leaf {
+  position: absolute;
+  width: 12px;
+  height: 20px;
+  background: linear-gradient(45deg,#7fff9f,#00ff8c);
+  border-radius: 8px;
+  opacity: 0.9;
+  transform: translateY(-20vh) rotate(0deg);
+  animation: fall 3.6s linear infinite;
+  left: calc(10% + (80% * var(--i)));
+  top: -10%;
+}
+
+/* we rely on nth-child to vary animation delay/left in DOM — if needed, JS can randomize */
+@keyframes fall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  25% { opacity: 1; }
+  100% { transform: translateY(120vh) rotate(360deg); opacity: 0; }
+}
+
+/* responsive */
+@media (max-width: 980px) {
+  .buybox-card { flex-direction: column; padding: 18px; }
+  .buybox-left, .buybox-right { width: 100%; }
+  .payment-grid { gap: 10px; }
+  .payment-card { width: 48%; }
+  .payment-row { flex-direction: column; }
+}
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.success-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 50px;
+  text-align: center;
+  border: 2px solid #b2e5c2;
+  box-shadow: 0 0 25px rgba(25, 135, 84, 0.3);
+  animation: popIn 0.4s ease-in-out;
+  width: 90%;
+  max-width: 600px;
+}
+
+.success-ring {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 5px solid #b2e5c2;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-tick {
+  font-size: 46px;
+  color: #198754;
+  text-shadow: 0 0 10px #00ff8c;
+}
+
+.eco-receipt {
+  background: #f7fff8;
+  border: 1px solid #b2e5c2;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+  box-shadow: inset 0 0 15px rgba(0, 150, 80, 0.1);
+}
+
+.eco-receipt h3 {
+  text-align: center;
+  color: #0f5132;
+  margin-bottom: 10px;
+}
+
+.eco-receipt p {
+  font-size: 14px;
+  color: #0f5132;
+  margin: 5px 0;
+}
+
+.redirect-msg {
+  margin-top: 15px;
+  color: #0f5132;
+  font-weight: 500;
+  font-style: italic;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.print-btn {
+  margin-top: 15px;
+  background: linear-gradient(45deg, #16a34a, #065f46);
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(25, 135, 84, 0.3);
+  cursor: pointer;
+}
+
+.print-btn:hover {
+  background: linear-gradient(45deg, #00c76e, #0f5132);
+  transform: scale(1.05);
+}
+
+.success-box img {
+  width: 100px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 150, 80, 0.2);
+}

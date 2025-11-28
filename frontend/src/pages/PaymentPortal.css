@@ -1,0 +1,300 @@
+/* 🌿 Overall Page */
+.payment-container {
+  background: linear-gradient(145deg, #e9f8ec, #d1f2d8);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🌿 Portal Wrapper */
+.portal-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+/* 🌿 Payment Portal Box */
+.portal-box {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 0 25px rgba(0, 100, 50, 0.15);
+  border-radius: 20px;
+  padding: 40px 50px;
+  width: 90%;
+  max-width: 850px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+  border: 2px solid rgba(25, 135, 84, 0.3);
+}
+
+.portal-box h2 {
+  color: #0f5132;
+  font-size: 28px;
+  font-weight: 800;
+  text-shadow: 0 0 6px rgba(0, 255, 150, 0.3);
+}
+
+.portal-box .desc {
+  color: #2e7d5b;
+  font-size: 16px;
+  margin: 10px 0 25px;
+}
+
+/* 🌿 Payment Methods Grid */
+.method-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.method-card {
+  background: #f7fff8;
+  border: 2px solid #b2e5c2;
+  border-radius: 15px;
+  padding: 25px;
+  width: 240px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 150, 80, 0.1);
+}
+
+.method-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 200, 120, 0.3);
+  background: #eaffea;
+}
+
+.method-card.active {
+  border-color: #0f5132;
+  box-shadow: 0 0 15px rgba(25, 135, 84, 0.4);
+  background: #d6f9dd;
+}
+
+.method-card .icon {
+  font-size: 34px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.method-card h4 {
+  color: #0f5132;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.method-card p {
+  font-size: 13px;
+  color: #2e7d5b;
+}
+
+/* 🌿 UPI Section */
+.upi-section {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #b2e5c2;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 150, 80, 0.1);
+}
+
+.upi-qr {
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 150, 80, 0.2);
+  margin: 10px 0;
+}
+
+.pay-btn {
+  background: linear-gradient(45deg, #198754, #0f5132);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  border: none;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.3);
+}
+
+.pay-btn:hover {
+  background: linear-gradient(45deg, #00c76e, #0f5132);
+  transform: scale(1.05);
+}
+
+/* 🌿 Card Payment */
+.card-intro, .netbank-intro {
+  margin-top: 20px;
+}
+
+.open-btn {
+  background: linear-gradient(45deg, #b9ffbe, #7fe99a);
+  color: #0f5132;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.open-btn:hover {
+  background: #00c76e;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.card-form, .netbank-form {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 400px;
+  margin: 20px auto;
+  border: 1px solid #b2e5c2;
+}
+
+.card-form input,
+.netbank-form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #b2e5c2;
+  border-radius: 10px;
+  margin: 8px 0;
+  font-size: 14px;
+  color: #0f5132;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* 🌿 Success Section */
+.success-box {
+  background: rgba(255, 255, 255, 0.97);
+  border: 2px solid #b2e5c2;
+  box-shadow: 0 0 25px rgba(0, 150, 80, 0.2);
+  border-radius: 20px;
+  padding: 40px 60px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+  max-width: 750px;
+}
+
+.success-ring {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border: 5px solid #b2e5c2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(25, 135, 84, 0.4);
+}
+
+.success-tick {
+  font-size: 48px;
+  color: #198754;
+  text-shadow: 0 0 8px #00ff8c;
+}
+
+.success-box h2 {
+  color: #0f5132;
+  margin-bottom: 10px;
+}
+
+.success-box p {
+  color: #1c7b47;
+}
+
+/* 🌿 Receipt */
+.eco-receipt {
+  background: #f7fff8;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 25px;
+  border: 1px solid #b2e5c2;
+  box-shadow: inset 0 0 15px rgba(0, 150, 80, 0.1);
+  text-align: left;
+  max-width: 450px;
+  margin-inline: auto;
+}
+
+.eco-receipt h3 {
+  color: #0f5132;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.eco-receipt p {
+  font-size: 14px;
+  color: #145d36;
+  margin: 4px 0;
+}
+
+/* 🌿 Redirect Message */
+.redirect-msg {
+  color: #0f5132;
+  margin-top: 20px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* 🌿 Confetti / Leaves */
+.confetti-container {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+}
+
+.leaf {
+  position: absolute;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: #00c76e;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall 3.5s linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(350px) rotate(360deg); opacity: 0; }
+}
+
+/* ✨ Fade animation */
+.fadeIn {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌿 Responsive */
+@media (max-width: 768px) {
+  .portal-box {
+    padding: 30px 20px;
+  }
+
+  .method-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eco-receipt {
+    width: 100%;
+  }
+
+  .success-box {
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,194 @@
+/* 🌿 Page Base */
+.add-product-page {
+  background: linear-gradient(135deg, #eaffea, #f3fff6);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🌿 Modal Overlay */
+.add-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.6s ease;
+}
+
+/* 🌿 Modal Box */
+.add-modal {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  padding: 30px 40px;
+  width: 700px;
+  max-width: 95%;
+  box-shadow: 0 12px 35px rgba(25, 135, 84, 0.25);
+  backdrop-filter: blur(10px);
+  position: relative;
+  animation: slideUp 0.8s ease;
+}
+
+/* 🌿 Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.modal-header h2 {
+  color: #064d21;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #198754;
+  transition: 0.3s;
+}
+.close-btn:hover {
+  color: #dc3545;
+  transform: scale(1.2);
+}
+
+/* 🌿 Image Upload Section */
+.image-section {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.preview-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 3px solid #bdf4c7;
+  box-shadow: 0 6px 18px rgba(25, 135, 84, 0.2);
+  transition: 0.3s ease;
+}
+.preview-image:hover {
+  transform: scale(1.05);
+}
+.upload-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: linear-gradient(45deg, #198754, #0f5132);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.upload-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 16px rgba(25, 135, 84, 0.3);
+}
+.upload-btn input {
+  display: none;
+}
+
+/* 🌿 Form Layout */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 🌿 Input Grid */
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+.input-field label {
+  font-weight: 600;
+  color: #064d21;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+.input-field input,
+.input-field select,
+.input-field textarea {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 2px solid #b6e6c3;
+  outline: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+}
+.input-field input:focus,
+.input-field textarea:focus,
+.input-field select:focus {
+  border-color: #198754;
+  box-shadow: 0 0 8px rgba(25, 135, 84, 0.3);
+}
+
+.full-width textarea {
+  width: 100%;
+  resize: none;
+}
+
+/* 🌿 Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.submit-btn,
+.cancel-btn {
+  border: none;
+  border-radius: 25px;
+  padding: 10px 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.submit-btn {
+  background: linear-gradient(45deg, #198754, #0f5132);
+  color: white;
+}
+.submit-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 18px rgba(25, 135, 84, 0.3);
+}
+.cancel-btn {
+  background: linear-gradient(45deg, #adb5bd, #6c757d);
+  color: white;
+}
+.cancel-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 18px rgba(108, 117, 125, 0.3);
+}
+
+/* 🌿 Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌿 Responsive */
+@media (max-width: 768px) {
+  .add-modal {
+    padding: 20px;
+  }
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+}

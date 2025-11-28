@@ -1,0 +1,39 @@
+.footer {
+  background-color: #0b8457; /* eco green */
+  color: white;
+  text-align: center;
+  padding: 10px 20px; /* compact padding */
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  line-height: 1.5;
+  border-top: 3px solid #0a6b49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Links inside footer */
+.footer a {
+  color: #e8ffe8;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer a:hover {
+  color: #b6ffb6;
+}
+
+/* Responsive footer for small screens */
+@media (max-width: 600px) {
+  .footer {
+    font-size: 13px;
+    padding: 12px 10px;
+    flex-direction: column;
+    gap: 5px;
+  }
+}

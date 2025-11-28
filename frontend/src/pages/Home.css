@@ -1,0 +1,458 @@
+/* 🌿 EcoBazaarX — Updated Fixed Banner Layout */
+
+body {
+  background: #f6fbf7;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  color: #1b4332;
+  scroll-behavior: smooth;
+}
+
+/* ===== FIXED BANNER (1813x486) ===== */
+.banner-fixed {
+  position: relative;
+  width: 100%;
+  height: 486px; /* fixed height */
+  max-width: 1813px;
+  margin: 0 auto;
+  border-radius: 0 0 25px 25px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ✨ Overlay content box */
+.banner-overlay {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 60px 100px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  animation: fadeUp 1.2s ease-in-out;
+  transition: all 0.4s ease;
+}
+
+/* 🎇 Add subtle green border glow */
+.banner-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  padding: 2px;
+  background: linear-gradient(135deg, #00ff88, #006633, #00cc66);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.3;
+}
+
+/* 🪶 Floating animation for the banner box */
+.banner-overlay:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+}
+
+.banner-overlay h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #e8ffe8;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.banner-overlay h1 span {
+  color: #7fff9f;
+  background: linear-gradient(90deg, #b7ffb2, #00c46b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.banner-overlay p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #e3ffe9;
+  line-height: 1.5;
+}
+
+/* 🌍 Explore Button */
+.explore-btn {
+  background: linear-gradient(45deg, #198754, #0f5132);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 14px 40px;
+  border-radius: 35px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(25, 135, 84, 0.6);
+  transition: all 0.3s ease-in-out;
+}
+
+.explore-btn:hover {
+  background: linear-gradient(45deg, #17a35b, #0b3d28);
+  transform: scale(1.07);
+  box-shadow: 0 0 18px rgba(25, 180, 90, 0.8);
+}
+
+/* ===== FEATURES ===== */
+.features {
+  text-align: center;
+  padding: 90px 80px;
+  background: linear-gradient(180deg, #f9fff9 0%, #f3fff3 100%);
+}
+
+.features h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #064d21;
+  margin-bottom: 45px;
+}
+
+.features h2 span {
+  color: #198754;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px 25px;
+  width: 300px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(180deg, #ecffef 0%, #ffffff 100%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+  color: #146c43;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* ===== PRODUCT SECTION ===== */
+.product-section {
+  padding: 80px 90px;
+  background: #f7fcf7;
+  text-align: center;
+}
+
+.product-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #064d21;
+  margin-bottom: 50px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 230px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover img {
+  transform: scale(1.05);
+}
+
+.hover-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  background: rgba(0, 128, 64, 0.6);
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-image:hover .hover-info {
+  opacity: 1;
+}
+
+.product-card h4 {
+  margin-top: 15px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #064d21;
+}
+
+.product-card p {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.carbon-tag {
+  display: inline-block;
+  margin-top: 5px;
+  background: #d4f5d4;
+  color: #156c35;
+  font-size: 13px;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-weight: 600;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .banner-fixed {
+    height: 400px;
+  }
+
+  .banner-overlay {
+    padding: 40px 60px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 2.3rem;
+  }
+
+  .features {
+    padding: 60px 40px;
+  }
+
+  .product-section {
+    padding: 60px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-fixed {
+    height: 330px;
+  }
+
+  .banner-overlay {
+    padding: 25px;
+  }
+
+  .banner-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner-overlay p {
+    font-size: 1rem;
+  }
+
+  .features {
+    padding: 50px 20px;
+  }
+
+  .product-section {
+    padding: 40px 20px;
+  }
+
+  .product-grid {
+    gap: 20px;
+  }
+}
+/* 🌍 Explore Button Smooth Scroll Pulse Animation */
+.explore-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.explore-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 35px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.35) 10%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.4s ease-out;
+}
+
+.explore-btn:hover::after {
+  transform: scale(3);
+  opacity: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* Global smooth scrolling */
+}
+/* 🌿 AUTH POPUP — Transparent & Glassmorphic Style */
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 35, 20, 0.55); /* darker transparent green */
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* 🌿 Popup Box */
+.auth-popup {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  padding: 2.5rem;
+  width: 380px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.3);
+  text-align: center;
+  animation: popupFade 0.4s ease-in-out;
+  transition: all 0.3s ease;
+}
+
+/* 🌿 Title */
+.auth-popup h2 {
+  margin-bottom: 15px;
+  color: #b9ffbe;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* 🌿 Inputs */
+.auth-popup input,
+.auth-popup select {
+  width: 100%;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: #000000;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.auth-popup input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.auth-popup input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(25, 135, 84, 0.5);
+}
+
+/* 🌿 Button */
+.auth-popup button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #198754, #0f5132);
+  color: #e9ffe9;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(25, 135, 84, 0.4);
+}
+
+.auth-popup button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(25, 135, 84, 0.6);
+  background: linear-gradient(90deg, #157347, #0d3f28);
+}
+
+/* 🌿 Close Button */
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #b9ffbe;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.close-btn:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #7fff9f;
+}
+
+/* 🌿 Animations */
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+  }
+}

@@ -1,0 +1,314 @@
+/* Overlay background */
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Popup container */
+.auth-popup {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 380px;
+  padding: 35px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out;
+  position: relative;
+}
+
+/* Title */
+.auth-popup h2 {
+  margin-bottom: 25px;
+  color: #1b4332;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Inputs and dropdown same width + height */
+.auth-popup input,
+.auth-popup select {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  margin: 10px 0;
+  border: 1px solid #b7c4b8;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  background: #f9fdfb;
+  box-sizing: border-box;
+  display: block;
+  line-height: normal;
+}
+
+/* Fix dropdown arrow and alignment */
+.auth-popup select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg width='14' height='10' xmlns='http://www.w3.org/2000/svg'><path fill='%232d6a4f' d='M1 1l6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px;
+  padding-right: 36px; /* leaves space for arrow */
+}
+
+/* Focus state */
+.auth-popup input:focus,
+.auth-popup select:focus {
+  border-color: #2d6a4f;
+  box-shadow: 0 0 3px rgba(45, 106, 79, 0.4);
+}
+
+/* Buttons */
+.auth-popup button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #2d6a4f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-popup button:hover {
+  background: #40916c;
+}
+
+/* Close icon */
+.close-icon {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 18px;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-icon:hover {
+  color: #007e33; /* eco green hover */
+}
+
+/* Auth switch */
+.auth-switch {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+}
+
+.auth-switch span {
+  color:  #01471e;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.auth-switch span:hover {
+  color: #033617;
+}
+
+/* Social buttons */
+.social-signup {
+  margin-top: 20px;
+}
+
+.social-signup p {
+  margin-bottom: 10px;
+  color: #000000;
+  font-weight: 500;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.social-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.google-btn:hover {
+  background: #e7f0ff;
+  border-color: #3c79e6;
+}
+
+.facebook-btn:hover {
+  background: #ecf3ff;
+  border-color: #1877f2;
+}
+
+.apple-btn:hover {
+  background: #f2f2f2;
+  border-color: #000;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.auth-popup {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 40px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #0b0b0b;
+}
+
+h2 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+}
+
+.auth-input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 4px #2e7d32;
+}
+
+.auth-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.auth-btn:hover {
+  background: #1b5e20;
+}
+
+.auth-switch {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-switch span {
+  color: #2e7d32;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.social-signup {
+  margin-top: 20px;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.social-buttons a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.social-buttons a:hover {
+  transform: scale(1.05);
+}
+
+.google-btn {
+  background-color: #db4437;
+}
+
+.facebook-btn {
+  background-color: #4267b2;
+}
+
+.apple-btn {
+  background-color: #000;
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+}
